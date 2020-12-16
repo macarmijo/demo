@@ -1,21 +1,21 @@
-import logo from './logo.svg';
+import lightning from './lightning.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={lightning} className="App-lightning" alt="lightning" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Learning with Coderhouse.
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.linkedin.com/in/macarenaarmijo/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Maca Armijo
         </a>
       </header>
     </div>

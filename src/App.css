@@ -2,13 +2,14 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.App-lightning {
+  height: 10vmin;
+  transform:rotate(90deg);
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .App-lightning {
     animation: App-logo-spin infinite 20s linear;
   }
 }
@@ -19,13 +20,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .App-link {
-  color: #61dafb;
+  color: rgba(247, 180, 80, 0.954);
 }
 
 @keyframes App-logo-spin {
