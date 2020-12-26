@@ -1,25 +1,17 @@
-import lightning from './lightning.svg';
-import './App.css';
+import React from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Main from './Main'
+import "./estilos.css"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={lightning} className="App-lightning" alt="lightning" />
-        <p>
-          Learning with Coderhouse.
-        </p>
-        <a
-          className="App-link"
-          href="https://www.linkedin.com/in/macarenaarmijo/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Maca Armijo
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+        <Header/>
+        <Main/>
+        <Footer/>
+        </>
+    )
 }
 
-export default App;
+export default App
