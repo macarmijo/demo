@@ -1,16 +1,14 @@
 import React from 'react'
 import Navbar from './Navbar'
 
-const Header = () => {
+const Header = ({hacerClick}) => {
     return (
         <header>
-            <div class="header">
-                    <section class = "left">
-                    <img src="./MVP.jpg" class="mvp" alt="mvp"></img>
-                    </section>
-                    <section class="right">
-                    <Navbar/>
-                    </section>
+            <div className="introHeader">
+                <h1>Khyl Porcelli</h1>
+            </div>
+            <div className="header"> 
+                <Navbar/>
             </div>
         </header>
     )

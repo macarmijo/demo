@@ -1,12 +1,12 @@
 import React from 'react'
-import navbar from './Navbar'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function footer() {
     return (
         <footer>
-            <p>By macaArmi</p>
-            <navbar/>
+            <p>by macaArmi</p>
+            &nbsp;
+            <FontAwesomeIcon icon="coffee" />
         </footer>
     )
 }

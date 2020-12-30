@@ -1,15 +1,16 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function Navbar() {
+const Navbar = ({hacerClick})  => {
+
     return (
         <nav>
-            <div>
-                <ul class="lista">
-                    <li class="listado"><a href="#">Home</a></li>
-                    <li class="listado"><a href="#">Productos</a></li>
-                    <li class="listado"><a href="#">Nosotrxs</a></li>
-                </ul>
-            </div>
+            <ul className="lista">
+                <a href="#" className="listado">Home</a>
+                <a href="#" className="listado">About me</a>
+                <a href="#" className="listado">Meal Preps</a>
+                <a><button href="#" className="listado" onClick={hacerClick}><FontAwesomeIcon icon="shopping-cart" /></button></a>
+            </ul>
         </nav>
     )
 }
