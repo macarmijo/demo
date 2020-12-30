@@ -9,12 +9,10 @@ import { faShoppingCart, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 library.add( faShoppingCart, faCoffee )
 
-function App() {
+const App = () => {
     return (
         <>
-        <Header
-            hacerClick = { () => {console.log("click")} }
-        />
+        <Header/>
         <Main/>
         <Footer/>
         </>

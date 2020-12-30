@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 
-const Header = ({hacerClick}) => {
+const Header = () => {
     return (
         <header>
             <div className="introHeader">
