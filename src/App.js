@@ -15,7 +15,7 @@ const App = () => {
         <Header/>
         <Main/>
         <ItemListContainer
-            saludo="Lista de productos"
+            greeting="Lista de productos"
         />
         <Footer/>
         </>
