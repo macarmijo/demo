@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Main from './Main'
@@ -10,14 +10,16 @@ import ItemListContainer from './components/ItemListContainer'
 library.add( faShoppingCart, faCoffee )
 
 const App = () => {
+
+
     return (
         <>
         <Header/>
         <Main/>
         <ItemListContainer
-            greeting="Lista de productos"
+            greeting="Products List"
         />
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }
