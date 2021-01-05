@@ -152,7 +152,7 @@ main{
   flex-direction: row;
   align-items: center;
 }
-.button{
+.buttonProd{
     background-color: rgba(70, 161, 147, 0.6);
     border-style: none;
     border-radius: 30px;

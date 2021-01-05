@@ -1,12 +1,21 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import ItemCount from './ItemCount'
 
 
 const ItemListContainer = ({greeting}) => {
-    
-    const [contador, setContador] = useState(0)
+
+    let imagenes = ['./beef.jpg', './chicken.jpg', './breakfast.jpg', './glutenFree.jpg','./healthy.png', './low-carb.webp', './vegan.png', './veggie.png']
+    let descripcion = ["High protein", "Mediterranean", "Breakfast", "Gluten free", "Healthy heart", "Low carb", "Vegan", "Veggie"]
+    let stock = 9;
+
+    const [contador, setContador] = useState(1)
 
     const aumentarContador = () => {
+        if (contador < stock){
             setContador(contador + 1)
+        }else{
+            setContador( stock )
+        }        
     }
 
     const restarContador = () => {
@@ -16,6 +25,7 @@ const ItemListContainer = ({greeting}) => {
             setContador(contador - 1)
     }
 
+    
     return (
         <div className="itemList">
             <h1>{greeting}</h1>
@@ -23,11 +33,21 @@ const ItemListContainer = ({greeting}) => {
                 <article className="one-product">
                     <img src="./beef.jpg" alt="beef"></img>
                     <h3>High protein</h3>
-                    <div className="contador">
-                        <button onClick={ aumentarContador } className="button">+</button>
-                        <p>{contador}</p>
-                        <button onClick={ restarContador } className="button">-</button>
-                    </div>
+                    <p>stock : {stock}</p>
+                    &nbsp;
+                    <ItemCount
+                        boton = {contador}
+                        aumentar = {aumentarContador}
+                        restar = {restarContador}
+                    />
+                    <button className="addToCart" onClick = {() => {console.log(contador)}}>add to cart</button>
+                </article>
+                               
+
+                {/* <article className="one-product">
+                    <img src= alt="beef"></img>
+                    <h3>High protein</h3>
+                    <ItemCount/>
                     <button className="addToCart" onClick = {() => {console.log(contador)}}>add to cart</button>
                 </article>
                 <article className="one-product">
@@ -99,7 +119,7 @@ const ItemListContainer = ({greeting}) => {
                         <button onClick={ restarContador } className="button">-</button>
                     </div>
                     <button className="addToCart" onClick = {() => {console.log(contador)}}>add to cart</button>
-                </article>
+                </article> */}
             </section>
 
         </div>
