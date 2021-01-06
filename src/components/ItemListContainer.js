@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
+import Item from './Item'
 import ItemCount from './ItemCount'
 
 
 const ItemListContainer = ({greeting}) => {
 
-    let imagenes = ['./beef.jpg', './chicken.jpg', './breakfast.jpg', './glutenFree.jpg','./healthy.png', './low-carb.webp', './vegan.png', './veggie.png']
-    let descripcion = ["High protein", "Mediterranean", "Breakfast", "Gluten free", "Healthy heart", "Low carb", "Vegan", "Veggie"]
+    // let imagenes = ['./beef.jpg', './chicken.jpg', './breakfast.jpg', './glutenFree.jpg','./healthy.png', './low-carb.webp', './vegan.png', './veggie.png']
+    // let descripcion = ["High protein", "Mediterranean", "Breakfast", "Gluten free", "Healthy heart", "Low carb", "Vegan", "Veggie"]
     let stock = 9;
 
     const [contador, setContador] = useState(1)
+    // const [stock , setStock] = useState(9)
 
     const aumentarContador = () => {
         if (contador < stock){
@@ -19,8 +21,8 @@ const ItemListContainer = ({greeting}) => {
     }
 
     const restarContador = () => {
-        if(contador < 1){
-            setContador(0)
+        if(contador < 2){
+            setContador(1)
         }else
             setContador(contador - 1)
     }
@@ -31,10 +33,16 @@ const ItemListContainer = ({greeting}) => {
             <h1>{greeting}</h1>
             <section className="products-container">
                 <article className="one-product">
-                    <img src="./beef.jpg" alt="beef"></img>
+                    {/* <img src="./beef.jpg" alt="beef"></img>
                     <h3>High protein</h3>
                     <p>stock : {stock}</p>
-                    &nbsp;
+                    &nbsp; */}
+                    <Item
+                        title = {"High Protein"}
+                        id = {30}
+                        price = {15}
+                        pictureURL = "https://i.ibb.co/PxLhX1h/beef.jpg"
+                    />
                     <ItemCount
                         boton = {contador}
                         aumentar = {aumentarContador}
@@ -43,7 +51,6 @@ const ItemListContainer = ({greeting}) => {
                     <button className="addToCart" onClick = {() => {console.log(contador)}}>add to cart</button>
                 </article>
                                
-
                 {/* <article className="one-product">
                     <img src= alt="beef"></img>
                     <h3>High protein</h3>
