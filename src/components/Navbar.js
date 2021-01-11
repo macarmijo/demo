@@ -7,9 +7,9 @@ const Navbar = ()  => {
         <>
         <nav>
             <ul className="lista">
-                <a href="#" className="listado">Home</a>
-                <a href="#" className="listado">About me</a>
-                <a href="#" className="listado">Meal Preps</a>
+                <a className="listado">Home</a>
+                <a className="listado">About me</a>
+                <a className="listado">Meal Preps</a>
                 <CartWidget/>
             </ul>
         </nav>
