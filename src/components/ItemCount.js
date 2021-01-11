@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({ initial, stock }) => {
 
     const [contador, setContador] = useState(initial)
-    // const [stock , setStock] = useState(9)
 
     const aumentarContador = () => {
         if (contador < stock){
@@ -14,7 +13,7 @@ const ItemCount = ({stock, initial}) => {
     }
 
     const restarContador = () => {
-        if(contador < initial){
+        if(contador <= initial){
             setContador(initial)
         }else
             setContador(contador - 1)
