@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Item from './Item'
 import ItemCount from './ItemCount'
 
@@ -7,27 +7,7 @@ const ItemListContainer = ({greeting}) => {
 
     // let imagenes = ['./beef.jpg', './chicken.jpg', './breakfast.jpg', './glutenFree.jpg','./healthy.png', './low-carb.webp', './vegan.png', './veggie.png']
     // let descripcion = ["High protein", "Mediterranean", "Breakfast", "Gluten free", "Healthy heart", "Low carb", "Vegan", "Veggie"]
-    let stock = 9;
 
-    const [contador, setContador] = useState(1)
-    // const [stock , setStock] = useState(9)
-
-    const aumentarContador = () => {
-        if (contador < stock){
-            setContador(contador + 1)
-        }else{
-            setContador( stock )
-        }        
-    }
-
-    const restarContador = () => {
-        if(contador < 2){
-            setContador(1)
-        }else
-            setContador(contador - 1)
-    }
-
-    
     return (
         <div className="itemList">
             <h1>{greeting}</h1>
@@ -44,11 +24,9 @@ const ItemListContainer = ({greeting}) => {
                         pictureURL = "https://i.ibb.co/PxLhX1h/beef.jpg"
                     />
                     <ItemCount
-                        boton = {contador}
-                        aumentar = {aumentarContador}
-                        restar = {restarContador}
+                        initial = { 1 } 
+                        stock = { 9 }
                     />
-                    <button className="addToCart" onClick = {() => {console.log(contador)}}>add to cart</button>
                 </article>
                                
                 {/* <article className="one-product">

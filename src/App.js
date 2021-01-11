@@ -9,6 +9,7 @@ import ItemListContainer from './components/ItemListContainer'
 
 library.add( faShoppingCart, faCoffee )
 
+
 const App = () => {
 
 
@@ -18,6 +19,7 @@ const App = () => {
         <Main/>
         <ItemListContainer
             greeting="Products List"
+            // products={ items }
         />
         {/* <Footer/> */}
         </>
