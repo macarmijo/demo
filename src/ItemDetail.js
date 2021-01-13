@@ -1,14 +1,21 @@
 import React from 'react'
 import ItemCount from './components/ItemCount'
+import './components/itemDetail.css'
 
-const ItemDetail = ({title, image, description, price }) => {
+const ItemDetail = ({title, image, description, price, stock, initial }) => {
     return (
-        <div>
+        <div className="itemDetail">
                  <h1> {title} </h1> 
                  <img src ={ image }></img>  
                  <p> ${price} </p>
-                 <p>{description}</p> 
-                 <ItemCount/>  
+                 <p>{description}</p>
+                 &nbsp;
+                 {stock ?
+                 <p>{stock} in Stock</p>
+                :<h1>Not in stock</h1>
+                }
+                &nbsp;
+                <ItemCount initial={initial} stock={stock}/>
         </div>
     )
 }

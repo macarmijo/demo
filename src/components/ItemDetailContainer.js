@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import ItemDetail from '../ItemDetail'
 import { useParams } from "react-router-dom"
 
 
@@ -36,7 +37,7 @@ const products = [
     stock: 3 ,initial: 1, description: "alguna descripción" }
     ]
 
-const ItemDetailContainer = ({ products }) => {
+const ItemDetailContainer = ({ }) => {
     
     
     const [ item, setItem ] = useState()
@@ -51,25 +52,25 @@ const ItemDetailContainer = ({ products }) => {
         }, 2000);
         }
         )
-        promesa.then(result => setItem(result)) 
-        promesa.catch(err => console.log("Algo salio mal")) 
+        promesa.then( result => setItem(result) ) 
+        promesa.catch( err => console.log("Algo salio mal") ) 
 
     },  [id]);
 
     return (
         <div>
-            { item ?
-            <ItemDetail
-             id={item.id}
-             title={item.titulo}     
-             price={item.precio}
-             image={item.imagen}
-             description={item.description}
-             stock={item.stock}
-             initial={item.initial}
-             />
-             :
-             <h2>Loading</h2>}
+            { item 
+            ? <ItemDetail
+              id={item.id}
+              title={item.titulo}     
+              price={item.precio}
+              image={item.imagen}
+              description={item.description}
+              stock={item.stock}
+              initial={item.initial}
+              />
+            : <h2>Loading</h2> 
+            }
         </div>
     )
 }
