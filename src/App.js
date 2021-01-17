@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Header from './components/Header'
-// import Footer from './components/Footer'
 import Main from './Main'
 import "./estilos.css"
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -8,6 +7,7 @@ import { faShoppingCart, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Carrito from './components/Carrito'
 
 library.add( faShoppingCart, faCoffee )
 
@@ -33,8 +33,10 @@ const App = () => {
                     greeting="Products"
                 />
             </Route>
+            <Route exact path="/cart">
+                <Carrito/>
+            </Route>
         </Switch>
-        {/* <Footer/> */}
         </BrowserRouter>
         </>
     )
