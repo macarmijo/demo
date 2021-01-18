@@ -25,6 +25,10 @@ const App = () => {
                 greeting="Products"
                 /> 
             </Route>
+            <Route exact path="/category/:id">
+                <ItemDetailContainer
+                />
+            </Route>
             <Route exact path="/item/:id">
                 <ItemDetailContainer/>
             </Route>

@@ -1,8 +1,17 @@
 import React from 'react'
 import CartWidget from './CartWidget'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import './navbar.css'
+import DropdownNav from './DropdownNav';
+
 
 const Navbar = ()  => {
+
+    // const [visible, setVisible] = useState(false);
+
+    // const handleHover = () => {
+    //   setVisible((prevVisible) => (prevVisible = !prevVisible));
+    // };
 
     return (
         <>
@@ -10,7 +19,7 @@ const Navbar = ()  => {
             <ul className="lista">
                 <Link to="/" ><a className="listado">Home</a></Link>
                 <a className="listado">About me</a>
-                <Link to="/ItemListContainer"><a className="listado">Meal Preps</a></Link>
+                <DropdownNav/>
                 <Link to="/cart"><CartWidget/></Link>
             </ul>
         </nav>

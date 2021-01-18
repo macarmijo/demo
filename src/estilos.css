@@ -22,57 +22,6 @@ a{
   color:inherit;
 }
 
-/* HEADER */
-.introHeader{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(156, 24, 24);
-  height: 7vh;
-}
-
-.introHeader h1{
-  font-size: 18px;
-  font-family: 'Nothing You Could Do';
-  color: rgb(238, 227, 227);
-}
-.header{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 10vh;
-  box-shadow: 0 8px 6px -6px black;
-  position: relative;
-  z-index: 3;
-}
-
-.right{
-  display: flex;
-  flex-direction:column;
-}
-.lista{
-  display: flex;
-}
-.listado{
-  font-size: 20px;
-  color: black;
-  font-weight: bold;
-  padding: 15px;
-  margin:2px;
-  border-radius: 10px;
-  background-color: rgba(217, 215, 230, 0.3) ;
-}
-
-.listado:hover{
-  font-size: 21px;
-}
-
-button{
-  border-style: none;
-  background-color: inherit;
-}
-
   /* BODY */
 main{
   height: 80vh;

@@ -29,19 +29,24 @@ const ItemDetail = ({title, image, description, price, stock, initial, item }) =
 
     return (
         <div className="itemDetail">
-                 <h1> {title} </h1> 
-                 <img src ={ image } alt="alt"></img>  
-                 <p> ${price} </p>
-                 <p>{description}</p>
-                 &nbsp;
-                 {stock ?
-                 <p>{stock} in Stock</p>
-                :<h1>Not in stock</h1>
-                }
-                &nbsp;
-                <ItemCount initial={initial} stock={stock} estado={estadoBoton} item={item}
-                carrito={agregarCarrito} text={"Agregaste " + contDetail + " " +title + " al carrito"} 
-                suma={aumentarCont} resta={restarCont} contador={contDetail} />
+            <h1> {title} </h1> 
+            <img src ={ image } alt="alt"></img>  
+            <p> ${price} </p>
+            <p>{description}</p>
+            &nbsp;
+            { stock ? <p>{stock} in Stock</p> :<h1>Not in stock</h1> }
+            &nbsp;
+            <ItemCount 
+                initial={initial} 
+                stock={stock} 
+                estado={estadoBoton} 
+                item={item}
+                carrito={agregarCarrito} 
+                text={"Agregaste " + contDetail + " " +title + " al carrito"} 
+                suma={aumentarCont} 
+                resta={restarCont} 
+                contador={contDetail}
+            />
         </div>
     )
 }

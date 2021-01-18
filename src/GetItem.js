@@ -5,35 +5,35 @@ import ItemDetail from './ItemDetail'
 const products = [
     { id: 1 ,titulo: "Breakfast", precio: "8", 
     imagen: "https://i.ibb.co/tcGJ4rd/breakfast.jpg",
-    stock: 5 ,initial: 1, description: "alguna descripción", category: "Breakfast" },
+    stock: 5 ,initial: 1, description: "alguna descripción", categoryId: "1" },
   
     { id: 2 ,titulo: "Mediterranean" ,precio: "10" ,
       imagen: "https://i.ibb.co/wCnfmj0/chicken.jpg",
-      stock: 5, initial: 1, description: "alguna descripción", category: "Dinner & Lunch" },
+      stock: 5, initial: 1, description: "alguna descripción", categoryId: "2" },
     
     { id: 3 ,titulo: "Gluten Free" ,precio: "20" ,
       imagen: "https://i.ibb.co/HTqv8mm/gluten-Free.jpg",
-      stock: 6 ,initial: 1, description: "alguna descripción", category: "ejemplo" },
+      stock: 6 ,initial: 1, description: "alguna descripción", categoryId: "3" },
     
     { id: 4 ,titulo: "Low carb" ,precio: "30" ,
     imagen: "https://i.ibb.co/M6DMj1G/low-carb.webp",
-    stock: 9 ,initial: 1, description: "alguna descripción", category: "ejemplo" },
+    stock: 9 ,initial: 1, description: "alguna descripción", categoryId: "3" },
     
     { id: 5 ,titulo: "Healthy heart" ,precio: "25" ,
     imagen: "https://i.ibb.co/QcrT8xS/healthy.png",
-    stock: 10 ,initial: 1, description: "alguna descripción", category: "ejemplo" },
+    stock: 10 ,initial: 1, description: "alguna descripción", categoryId: "3" },
       
     { id: 6 ,titulo: "Vegan" ,precio: "30" ,
       imagen: "https://i.ibb.co/MnKVg7B/vegan.png",
-      stock: 6 ,initial: 1, description: "alguna descripción", category: "Non-meat Meals" },
+      stock: 6 ,initial: 1, description: "alguna descripción", categoryId: "4" },
     
     { id: 7, titulo: "Veggie", precio: "30", 
       imagen: "https://i.ibb.co/Wt8TR71/veggie.png",
-      stock: 10 ,initial: 1, description: "alguna descripción", category: "Non-meat Meals" },
+      stock: 10 ,initial: 1, description: "alguna descripción", categoryId: "4" },
       
     { id: 8, titulo: "Protein" ,precio: "20" ,
     imagen: "https://i.ibb.co/PxLhX1h/beef.jpg",
-    stock: 3 ,initial: 1, description: "alguna descripción", category: "Dinner & Lunch" }
+    stock: 3 ,initial: 1, description: "alguna descripción", categoryId: "2" }
     ]
 
 const GetItem = () => {
