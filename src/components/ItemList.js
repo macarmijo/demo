@@ -7,6 +7,7 @@ const ItemList = ({ products }) => {
         <section className="products-container">
             { products.map( product => 
                 <Item 
+                    key={product.id}
                     id={product.id} 
                     title={product.titulo} 
                     image={product.imagen}  

@@ -19,6 +19,7 @@
     flex-direction: row;
     width: 100vw;
     height: 10vh;
+    background-color: rgba(40, 35, 35, 0.7);
     box-shadow: 0 8px 6px -6px black;
     position: relative;
     z-index: 3;
@@ -31,6 +32,7 @@
   .lista{
     display: flex;
   }
+
   .listado{
     font-size: 20px;
     color: white;
@@ -38,13 +40,33 @@
     padding: 15px;
     margin:2px;
     border-radius: 10px;
-    /* background-color: rgba(217, 215, 230, 0.3) ; */
+    background-color: transparent;
+    border-color: transparent;
   }
-  
+  .mealPrep:hover{
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .mealPrep:active{
+    background-color: transparent;
+    border-color: transparent;
+  }
   .listado:hover{
     font-size: 21px;
   }
-  
+
+  .MenuListado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 80vw;
+    background-color: rgba(40, 35, 35, 0.7);
+    border-radius: 10px;
+    position: relative;
+    z-index: 3;
+  }
+
   button{
     border-style: none;
     background-color: inherit;

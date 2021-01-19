@@ -1,36 +1,38 @@
 import React from 'react'
-import {Dropdown, Button, ButtonGroup} from 'bootstrap';
-
-// import { Link } from 'react-router-dom'
+import {Dropdown, Button} from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
 const categories = [{
-    categoryId: "1",
+    categoryId: 1,
     name: "Breakfast"
 },
 {
-    categoryId: "2" ,
+    categoryId: 2 ,
     name: "Dinner & Lunch"
 },{
-    categoryId: "3",
-    name: "ejemplo"
+    categoryId: 3,
+    name: "Ejemplo"
 },{
-    categoryId: "4",
+    categoryId: 4,
     name: "Non-meat Meals"
 }]
 
 const DropdownNav = () => {
     return (
         <>
-            <Dropdown as={ButtonGroup}>
-            <Button >Split Button</Button>
+            <Dropdown >
+                <Link to="/ItemListContainer"><Button className="listado mealPrep">Meal Preps</Button></Link>
+                <Dropdown.Toggle className="listado mealPrep" />
 
-            <Dropdown.Toggle id="dropdown-split-basic" />
-
-            <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-            </Dropdown.Menu>
+                <Dropdown.Menu className="MenuListado">
+                    { categories.map( category => 
+                    <Dropdown.Item className="listado">
+                        <Link to={`/category/${category.categoryId}`}>
+                        <a>{category.name}</a>
+                        </Link>
+                    </Dropdown.Item>
+                    )}  
+                </Dropdown.Menu>
             </Dropdown>
         
                 {/* { categories.map( category => 
