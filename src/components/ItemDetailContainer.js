@@ -1,5 +1,5 @@
 import React from 'react'
-import GetItem from '../GetItem'
+import GetItem from './GetItem'
 
 const ItemDetailContainer = ({ }) => {
     

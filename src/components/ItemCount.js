@@ -1,26 +1,54 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom';
+import { CartContext } from './CartContext'
 
-const ItemCount = ({ text, carrito, estado, suma, resta, contador, item}) => {
+const ItemCount = ({stock, initial, name, item, key}) => {
+
+    const [ contDetail  , setContDetail ] = useState(initial);
+
+    const [ estadoBoton , setEstadoBoton ] = useState(true);
+
+    const { addToCart } = useContext(CartContext)
+
+    const aumentarCont = () => {
+        if (contDetail < stock){
+            setContDetail(contDetail + 1)
+        }else{
+            setContDetail( stock )
+        }        
+    }
+
+    const restarCont = () => {
+        if(contDetail > initial){
+            setContDetail(contDetail - 1)
+        }
+    }
+
+    const agregarCarrito = () => {
+        //agrego contexto de Cart
+        addToCart(item, contDetail, key)
+        setEstadoBoton(false)
+    }
+
 
     return (
         <>
 
-            {estado ?
+            {estadoBoton ?
             (<>
             <div className="contador">
-                <button onClick={resta} className="buttonProd">-</button>
-                <p>{contador}</p>
-                <button onClick={suma} className="buttonProd">+</button>
+                <button onClick={restarCont} className="buttonProd">-</button>
+                <p>{contDetail}</p>
+                <button onClick={aumentarCont} className="buttonProd">+</button>
             </div>    
             <div>
-                <button className="addToCart" onClick={ carrito }>add to cart</button>
+                <button className="addToCart" onClick={ agregarCarrito }>add to cart</button>
             </div>
             </>)  
             
             :(
                 <>
-                <h4>{text}</h4>
+                <h4>{"Agregaste " + contDetail + " " + name + " al carrito"}</h4>
                 <Link to="/cart">
                     <button className="addToCart">Terminar compra</button>
                 </Link>

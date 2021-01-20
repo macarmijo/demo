@@ -1,31 +1,8 @@
 import React, { useState } from 'react'
-import ItemCount from './components/ItemCount'
-import './components/itemDetail.css'
+import ItemCount from './ItemCount'
+import './itemDetail.css'
 
 const ItemDetail = ({title, image, description, price, stock, initial, item }) => {
-
-    const [ contDetail  , setContDetail ] = useState(initial);
-
-    const [ estadoBoton , setEstadoBoton ] = useState(true);
-
-    const aumentarCont = () => {
-        if (contDetail < stock){
-            setContDetail(contDetail + 1)
-        }else{
-            setContDetail( stock )
-        }        
-    }
-
-    const restarCont = () => {
-        if(contDetail > initial){
-            setContDetail(contDetail - 1)
-        }
-    }
-
-    const agregarCarrito = () => {
-        setEstadoBoton(false)
-    }
-
 
     return (
         <>
@@ -43,13 +20,8 @@ const ItemDetail = ({title, image, description, price, stock, initial, item }) =
             <ItemCount 
                 initial={initial} 
                 stock={stock} 
-                estado={estadoBoton} 
                 item={item}
-                carrito={agregarCarrito} 
-                text={"Agregaste " + contDetail + " " +title + " al carrito"} 
-                suma={aumentarCont} 
-                resta={restarCont} 
-                contador={contDetail}
+                name = {title}
             />
             
             </section>
