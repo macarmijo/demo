@@ -60,28 +60,39 @@ main{
   border-radius: 20px;
   padding: 10px;
 }
+.mealButton:hover{
+  background-color: rgb(38, 133, 101);
+}
 
 .itemList{
   height: 100vh;
   background-color: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
 /* productos */
 .itemList h1{
   font-size: 1.5em;
-  padding-top: 10px;
-  /* margin-top: 40px; */
+  margin: 2% 0;
+  padding: 10px 0px;
+  border-top-style:solid;
+  border-bottom-style: solid;
+  border-color: black; 
+  width: 100vw;
+  text-align: center;
 }
-.moreInfo{
-  background-color: rgba(156, 24, 24, 0.5);
+.loading{
+  text-align: center;
+}
+.moreInfo{;
   padding: 3%;
   border-radius: 10px;
 }
 .moreInfo:hover{
   font-size: 15px;
+  text-decoration: none;
+  background-color: rgb(215, 209, 184);
 }
 .products-container{
   display: flex;
@@ -90,22 +101,32 @@ main{
   flex-wrap: wrap;
 }
 .one-product{
-  width:20%;
-  margin: 10px 10px 20px;
+  width: 20vw;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  box-shadow: 2px 4px 9px -3px black;
+  position: relative;
+  z-index: 3;
+  padding: 10px;
+  border-radius: 10px;
 }
 .one-product h3{
   color: black;
   position: relative;
-  padding: 10px;
+  padding: 1%;
 }
 
 .one-productImg{
   width: 100%;
-  height: 230px;
   margin-bottom: 5%;
+  border-radius: 10%;
+}
+.one-productImg:hover{
+  border-radius: 50%;
 }
 /* contador productos */
 .contador{

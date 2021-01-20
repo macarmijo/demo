@@ -21,14 +21,15 @@ const DropdownNav = () => {
     return (
         <>
             <Dropdown >
-                <Link to="/ItemListContainer"><Button className="listado mealPrep">Meal Preps</Button></Link>
-                <Dropdown.Toggle className="listado mealPrep" />
+                <a className="listado"><Link to="/ItemListContainer">Meal Preps</Link>
+                <Dropdown.Toggle className="flechaCateg"/>
+                </a>
 
                 <Dropdown.Menu className="MenuListado">
                     { categories.map( category => 
-                    <Dropdown.Item className="listado">
+                    <Dropdown.Item className="categories" >
                         <Link to={`/category/${category.categoryId}`}>
-                        <a>{category.name}</a>
+                            <a>{category.name}</a>
                         </Link>
                     </Dropdown.Item>
                     )}  
