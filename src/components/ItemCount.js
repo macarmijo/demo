@@ -18,10 +18,14 @@ const ItemCount = ({ text, carrito, estado, suma, resta, contador, item}) => {
             </div>
             </>)  
             
-            :(<Link to ="/cart">
-                <h3>{text}</h3>
-                <button className="addToCart" >Terminar compra</button>
-            </Link>)
+            :(
+                <>
+                <h4>{text}</h4>
+                <Link to="/cart">
+                    <button className="addToCart">Terminar compra</button>
+                </Link>
+                </>
+            )
             }
         </>
     )

@@ -28,11 +28,15 @@ const ItemDetail = ({title, image, description, price, stock, initial, item }) =
 
 
     return (
+        <>
+        <h1 className="titleDetail"> {title} </h1> 
         <div className="itemDetail">
-            <h1> {title} </h1> 
-            <img src ={ image } alt="alt"></img>  
-            <p> ${price} </p>
-            <p>{description}</p>
+            <section className="itemBox">
+                <img src ={ image } alt="alt" className="itemImg"></img>  
+                <p className="description">{description}</p>
+            </section>
+            <section className="itemBox">
+            <h1> ${price} </h1>
             &nbsp;
             { stock ? <p>{stock} in Stock</p> :<h1>Not in stock</h1> }
             &nbsp;
@@ -47,7 +51,11 @@ const ItemDetail = ({title, image, description, price, stock, initial, item }) =
                 resta={restarCont} 
                 contador={contDetail}
             />
+            
+            </section>
+            
         </div>
+        </>
     )
 }
 

@@ -7,18 +7,12 @@ import DropdownNav from './DropdownNav';
 
 const Navbar = ()  => {
 
-    // const [visible, setVisible] = useState(false);
-
-    // const handleHover = () => {
-    //   setVisible((prevVisible) => (prevVisible = !prevVisible));
-    // };
-
     return (
         <>
         <nav>
             <ul className="lista">
                 <Link to="/" ><a className="listado">Home</a></Link>
-                <a className="listado">About me</a>
+                <Link to="/aboutMe"><a className="listado">About me</a></Link>
                 <DropdownNav/>
                 <Link to="/cart"><CartWidget/></Link>
             </ul>
