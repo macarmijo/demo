@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Header from './components/Header'
 import Main from './Main'
 import "./estilos.css"
@@ -9,7 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Carrito from './components/Carrito'
 import AboutMe from './components/AboutMe'
-import CartProvider from './components/CartContext';
+import CartProvider, { CartContext } from './components/CartContext';
 // import {firestore} from "./firebaseConfig"
 
 
@@ -40,6 +40,9 @@ const App = () => {
     //         console.log("fallo")
     //     })
     // })
+
+    const useCartContext = useContext(CartContext)
+    console.log(useCartContext) 
 
     return (
         <>

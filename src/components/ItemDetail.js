@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ItemCount from './ItemCount'
 import './itemDetail.css'
 
-const ItemDetail = ({title, image, description, price, stock, initial, item }) => {
+const ItemDetail = ({title, image, description, price, stock, initial, item, id }) => {
 
     return (
         <>
@@ -18,6 +18,7 @@ const ItemDetail = ({title, image, description, price, stock, initial, item }) =
             { stock ? <p>{stock} in Stock</p> :<h1>Not in stock</h1> }
             &nbsp;
             <ItemCount 
+                id = {id}
                 initial={initial} 
                 stock={stock} 
                 item={item}

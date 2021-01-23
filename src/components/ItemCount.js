@@ -1,14 +1,18 @@
 import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom';
-import { CartContext } from './CartContext'
+import {CartContext} from './CartContext'
 
-const ItemCount = ({stock, initial, name, item, key}) => {
+const ItemCount = ({id, stock, initial, name, item}) => {
 
     const [ contDetail  , setContDetail ] = useState(initial);
 
     const [ estadoBoton , setEstadoBoton ] = useState(true);
 
-    const { addToCart } = useContext(CartContext)
+    const useCartContext = useContext(CartContext)
+    
+
+    let { addItem } = useContext(CartContext)
+    // console.log(CartContext)
 
     const aumentarCont = () => {
         if (contDetail < stock){
@@ -24,12 +28,11 @@ const ItemCount = ({stock, initial, name, item, key}) => {
         }
     }
 
-    const agregarCarrito = () => {
+   const agregarCarrito = (item, contDetail, id) => {
         //agrego contexto de Cart
-        addToCart(item, contDetail, key)
+        addItem(item, contDetail, id)
         setEstadoBoton(false)
     }
-
 
     return (
         <>
