@@ -70,13 +70,7 @@ const GetItem = () => {
             { item 
             ? <ItemDetail
               key={item.id}
-              id={item.id}
-              title={item.titulo}     
-              price={item.precio}
-              image={item.imagen}
-              description={item.description}
-              stock={item.stock}
-              initial={item.initial}
+              item = {item}
               />
             : <h1 className="loading">Loading...</h1> 
             }
