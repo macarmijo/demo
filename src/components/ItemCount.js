@@ -31,7 +31,7 @@ const ItemCount = ({item, addToCart}) => {
             <>
             <h4>{"agregaste"+ " " + contDetail + " " + name + " al carrito" }</h4>
             <Link to="/cart">
-                <button className="addToCart">Terminar compra</button>
+                <button className="addToCart">ir al carrito</button>
             </Link>
             </>
             :
@@ -43,7 +43,7 @@ const ItemCount = ({item, addToCart}) => {
             </div>    
             <div>
                 <button className="addToCart" 
-                onClick={ () => {addToCart({ item: item, contador: contDetail})}}>
+                onClick={ () => {addToCart({ item: item, cantidad: contDetail})}}>
                     add to cart</button>
             </div>
             </>}

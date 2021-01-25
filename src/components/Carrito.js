@@ -8,13 +8,38 @@
 // Ahora debe consumir el CartContext y mostrar en tiempo real (aparte del ícono) qué cantidad de ítems están agregados (2 camisas y 1 gorro equivaldrían a 3 items)
 // El cart widget no se debe mostrar más si no hay items en el carrito, aplicando la técnica que elijas (dismount, style, etc)
 
-import React from 'react'
+import React, {useContext} from 'react'
+import CartContext from './CartContext'
+import CartItem  from './CartItem'
+
 
 const Carrito = () => {
+
+    const { cart } = useContext(CartContext)
     return (
-        <div>
-            <h1>Estas en el carrito</h1>
-        </div>
+        <>
+            <h1>Tu carrito</h1>
+            {cart.length ? 
+                <>
+                {/* <div className="cartColumns">
+                        <p>Imagen</p>
+                        <p>Nombre</p>
+                        <p>Cantidad</p>
+                        <p>Valor unitario</p>
+                        <p>Valor total</p>
+                </div> */}
+                <div class="cartObjets">
+                    {cart.map((carrito => [
+                        <CartItem key={carrito.id} item={carrito.item} cantidad={carrito.cantidad}/>
+                    ]))
+                    }
+                </div>
+                </>
+                :
+                <p>No hay items</p>
+            } 
+            
+        </>
     )
 }
 
