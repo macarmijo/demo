@@ -1,5 +1,5 @@
-import firebase from "firebase/app"
-import "firebase/firestore"
+import firebase from "firebase/app";
+import "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyD8g2HnRuEj-_LbbpKHlvTLCide1tfHlcE",
@@ -12,5 +12,4 @@ const firebaseConfig = {
 
 const app = firebase.initializeApp(firebaseConfig)
 
-//exporto solo esto que es lo que me va a dar servicio a los componentes en firebase
-export const firestore = firebase.firestore(app) 
+export const firestore = firebase.firestore(app)

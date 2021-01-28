@@ -5,9 +5,8 @@ import CartContext from './CartContext'
 
 const ItemCount = ({item, addToCart}) => {
 
-    const inicial = item.initial
-    const [ contDetail , setContDetail ] = useState(inicial)
-    const name = item.titulo
+    const [ contDetail , setContDetail ] = useState(1)
+    const name = item.title
     const { isInCart } = useContext(CartContext);
     const existeItem = isInCart(item.id);
 
@@ -19,7 +18,7 @@ const ItemCount = ({item, addToCart}) => {
         }        
     }
     const restarCont = () => {
-        if(contDetail > item.initial){
+        if(contDetail > 1){
             setContDetail(contDetail - 1)
         }
     }

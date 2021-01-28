@@ -17,48 +17,6 @@ library.add( faShoppingCart, faCoffee )
 
 const App = () => {
 
-// const [items, setItems] = useState([]) //no lo usa
-
-    // useEffect(() => {
-    //     const db = firestore
-    //     const collection = db.collection("items")
-    //     const query = collection.get()
-    
-    //     const query = collection.where("categoryId", "==", "2")
-    //       
-
-    //     query
-    //     .then(({docs})=>{   //hace destructuring de docs
-                // const arr=[]
-
-                // docs.forEach(doc => {
-                //     const nuevoDoc = {
-                //         id: doc.id,
-                //         ...doc.data()
-                //     }
-                //     arr.push(nuevoDoc)
-                // })
-
-
-
-     //-------------- esto no ------------
-    //         const items_array = resultado.docs
-    //         items_array.forEach(item =>{
-    //             const productoFinal = {
-    //                 id: item.id,
-    //                 // chequear ...
-    //                 ...item.data()
-    //             }
-    //-------------- esto no ------------
-    //             // console.log(item.id)
-    //             // console.log(item.data())
-    //         })
-    //         // console.log(resultado.docs)
-    //     })
-    //     .catch((err)=>{
-    //         console.log(err)
-    //     })
-    // }, [])
 
     return (
         <>
@@ -73,7 +31,7 @@ const App = () => {
                 greeting="Products"
                 /> 
             </Route>
-            <Route exact path="/category/:id">
+            <Route exact path="/category/:categoryId">
                 <ItemListContainer
                 />
             </Route>

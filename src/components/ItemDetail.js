@@ -10,14 +10,14 @@ const ItemDetail = ({item}) => {
    
     return (
         <>
-        <h1 className="titleDetail"> {item.titulo} </h1> 
+        <h1 className="titleDetail"> {item.title} </h1> 
         <div className="itemDetail">
             <section className="itemBox">
                 <img src ={ item.imagen } alt="alt" className="itemImg"></img>  
                 <p className="description">{item.description}</p>
             </section>
             <section className="itemBox">
-            <h1> ${item.precio} </h1>
+            <h1> ${item.price} </h1>
             &nbsp;
             { item.stock ? <h4>{item.stock} in stock</h4> :<h1>Not in stock</h1> }
             &nbsp;
